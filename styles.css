@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
+    text-align: center;
 }
 header {
     background-color: #343a40;
     color: white;
     padding: 15px;
-    text-align: center;
     font-size: 24px;
 }
 nav {
@@ -24,10 +24,9 @@ nav a {
     font-size: 18px;
 }
 .container {
-    text-align: center;
     padding: 50px 20px;
 }
-.footer {
+footer {
     background-color: #343a40;
     color: white;
     text-align: center;
@@ -35,3 +34,4 @@ nav a {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
