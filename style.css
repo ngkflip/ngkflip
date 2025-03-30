@@ -3,41 +3,52 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Dark background similar to DMFlip */
-    color: #ffffff; /* White text */
+    background-color: #121212;
+    color: #ffffff;
     text-align: center;
 }
 
 /* Header Styling */
 header {
-    background-color: #1c1c1c; /* Darker header */
+    background-color: #1c1c1c;
     color: white;
-    padding: 15px;
-    font-size: 24px;
+    padding: 20px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 50px;
+    flex-wrap: wrap;
 }
 
 /* Logo Styling */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+.logo h1 {
     font-size: 28px;
     font-weight: bold;
-    color: #ffffff; /* Yellow accent */
+    margin: 0;
+    text-transform: uppercase;
 }
 
 /* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #252525; /* Darker nav bar */
+    background-color: #252525;
     padding: 15px;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
-    color: #ffffff; /* Yellow highlight */
+    color: #ffffff;
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
@@ -45,29 +56,39 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffffff; /* White on hover */
+    color: #f1c40f;
 }
 
-/* Main Content */
-.container {
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Disclosure Page Special Styling */
-.disclosure-container {
-    background-color: #1c1c1c; /* Same as header */
+/* Responsive Navigation */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
     color: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-open {
+        display: flex;
+    }
 }
 
 /* Footer */
 footer {
-    background-color: #1c1c1c; /* Dark footer */
+    background-color: #1c1c1c;
     color: white;
     text-align: center;
     padding: 10px;
