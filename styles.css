@@ -3,14 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
+    background-color: #121212; /* Dark background like DMFlip */
+    color: #ffffff; /* White text */
     text-align: center;
-    color: white;
 }
 
 /* Header Styling */
-.header {
-    background-color: #1c1c1c;
+header {
+    background-color: #1c1c1c; /* Darker header */
     color: white;
     padding: 15px;
     font-size: 24px;
@@ -20,15 +20,19 @@ body {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #292929;
+    background-color: #252525; /* Darker nav bar */
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: #ffcc00; /* Yellow highlight */
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
+}
+
+nav a:hover {
+    color: #ffffff; /* White on hover */
 }
 
 /* Main Content */
@@ -38,7 +42,7 @@ nav a {
 
 /* Disclosure Page Special Styling */
 .disclosure-container {
-    background-color: #1c1c1c;
+    background-color: #1c1c1c; /* Same as header */
     color: white;
     padding: 20px;
     margin: 20px auto;
@@ -47,8 +51,8 @@ nav a {
 }
 
 /* Footer */
-.footer {
-    background-color: #1c1c1c;
+footer {
+    background-color: #1c1c1c; /* Dark footer */
     color: white;
     text-align: center;
     padding: 10px;
