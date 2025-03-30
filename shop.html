@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - NGKFlip</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #000000;
+            --secondary-bg: #121212;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --accent-color: #f0b90b;
+            --border-color: #333333;
+            --highlight-bg: #1a1a1a;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin: 40px 0 20px;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .shop-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background-color: var(--highlight-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .shop-now-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .shop-now-btn:hover {
+            background-color: #e0a800;
+        }
+        
+        .disclosure-box {
+            background-color: var(--highlight-bg);
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 40px 0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <div class="container">
+        <h1>NGKFlip Shop</h1>
+        
+        <div class="shop-intro">
+            <p>Discover the hottest deals and product recommendations while keeping things 100% transparent.</p>
+        </div>
+        
+        <div class="disclosure-box">
+            <p>NGKFlip participates in the Amazon Services LLC Associates Program, which is an affiliate advertising program designed to provide a means for websites to earn advertising fees by advertising and linking to Amazon.com</p>
+        </div>
+        
+        <h2>Featured Products</h2>
+        
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?fit=crop&w=500" alt="Amazon Warehouse Deals" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Amazon Warehouse Used Deals</h3>
+                    <a href="https://amzn.to/3WQo6ki" target="_blank" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1582902281043-69c645f40cd5?fit=crop&w=500" alt="Patagonia" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Patagonia</h3>
+                    <a href="https://amzn.to/3WCeBUu" target="_blank" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1493236272120-200db0da1927?fit=crop&w=500" alt="Foods & Grocery" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Foods & Grocery</h3>
+                    <a href="https://amzn.to/3YxyHlp" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?fit=crop&w=500" alt="Health and Beauty" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Health and Beauty</h3>
+                    <a href="https://amzn.to/4ch6dj4" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1559087316-47ce212113b7?fit=crop&w=500" alt="Nouri Products" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Nouri Products</h3>
+                    <a href="https://amzn.to/3WQIx0w" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1586880244543-0528a802be97?fit=crop&w=500" alt="Mobile Phones" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Mobile Cell Phones</h3>
+                    <a href="https://amzn.to/3AdMYK2" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
