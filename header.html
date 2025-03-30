@@ -7,32 +7,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #000000;
-            --secondary-color: #ffffff;
+            --primary-bg: #000000;
+            --secondary-bg: #121212;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
             --accent-color: #f0b90b;
+            --border-color: #333333;
         }
         
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
-            color: #ffffff;
+            background-color: var(--secondary-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         /* Header Styles */
         header {
-            background-color: var(--primary-color);
-            padding: 15px 30px;
+            background-color: var(--primary-bg);
+            padding: 15px 40px;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            border-bottom: 1px solid #000000;
         }
         
         .site-title {
-            color: var(--secondary-color);
+            color: var(--text-primary);
             text-decoration: none;
             font-size: 1.8rem;
             font-weight: 700;
@@ -43,35 +57,50 @@
         /* Navigation Styles */
         .main-nav {
             display: flex;
-            gap: 20px;
+            gap: 5px;
         }
         
         .nav-link {
-            color: var(--secondary-color);
+            color: var(--text-primary);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            transition: color 0.3s;
-            padding: 5px 0;
-            border-bottom: 2px solid transparent;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+            border-radius: 3px;
         }
         
         .nav-link:hover {
             color: var(--accent-color);
-            border-bottom: 2px solid var(--accent-color);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Main Content */
+        main {
+            flex: 1;
         }
         
         /* Footer Styles */
         footer {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            padding: 20px 30px;
+            background-color: var(--primary-bg);
+            color: var(--text-secondary);
+            padding: 30px 20px;
             text-align: center;
-            font-size: 0.8rem;
-            border-top: 1px solid #000000;
-            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-disclosure {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #999999;
         }
         
         .footer-links {
@@ -83,7 +112,7 @@
         }
         
         .footer-link {
-            color: var(--secondary-color);
+            color: var(--text-secondary);
             text-decoration: none;
             text-transform: uppercase;
             font-size: 0.8rem;
@@ -94,26 +123,32 @@
         }
         
         .copyright {
-            margin-top: 10px;
-            opacity: 0.7;
+            font-size: 0.8rem;
+            color: #666666;
+            margin-top: 20px;
         }
         
         /* Responsive Styles */
         @media (max-width: 768px) {
             header {
-                flex-direction: column;
-                gap: 15px;
                 padding: 15px 20px;
             }
             
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
             .main-nav {
-                gap: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 10px;
+                justify-content: flex-start;
             }
             
             .nav-link {
-                font-size: 0.75rem;
+                font-size: 0.8rem;
+                padding: 6px 10px;
             }
             
             .footer-links {
@@ -124,17 +159,19 @@
 </head>
 <body>
     <header>
-        <h1>
-            <a href="index.html" class="site-title">NGKFLIP</a>
-        </h1>
-        
-        <nav class="main-nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="deals.html" class="nav-link">Deals</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-            <a href="disclosure.html" class="nav-link">Disclosure</a>
-        </nav>
+        <div class="header-container">
+            <h1>
+                <a href="index.html" class="site-title">NGKFLIP</a>
+            </h1>
+            
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="deals.html" class="nav-link">Deals</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="disclosure.html" class="nav-link">Disclosure</a>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -142,15 +179,24 @@
     </main>
 
     <footer>
-        <div class="footer-links">
-            <a href="index.html" class="footer-link">Home</a>
-            <a href="deals.html" class="footer-link">Deals</a>
-            <a href="about.html" class="footer-link">About</a>
-            <a href="contact.html" class="footer-link">Contact</a>
-            <a href="disclosure.html" class="footer-link">Disclosure</a>
-        </div>
-        <div class="copyright">
-            &copy; 2023 NGKFlip. All rights reserved.
+        <div class="footer-container">
+            <p class="footer-disclosure">
+                NGKFlip participates in the Amazon Services LLC Associates Program, 
+                an affiliate advertising program designed to provide a means for 
+                websites to earn advertising fees by advertising and linking to Amazon.com
+            </p>
+            
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="deals.html" class="footer-link">Deals</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="disclosure.html" class="footer-link">Disclosure</a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 NGKFlip. All rights reserved.
+            </div>
         </div>
     </footer>
 </body>
