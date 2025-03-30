@@ -36,6 +36,16 @@ nav a {
     padding: 50px 20px;
 }
 
+/* Disclosure Page Special Styling */
+.disclosure-container {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 5px;
+}
+
 /* Footer */
 .footer {
     background-color: #1c1c1c;
