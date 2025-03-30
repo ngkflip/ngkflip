@@ -1,41 +1,66 @@
 <header class="wp-block-template-part">
-    <div class="wp-block-group alignfull is-layout-flow"
-        style="padding: clamp(1.5rem, 5vw, 2rem);">
+    <div class="wp-block-group alignfull" style="padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center;">
         
-        <div class="wp-block-group is-content-justification-space-between is-layout-flex">
-            <div class="wp-block-group is-nowrap is-layout-flex">
-                <div class="is-default-size wp-block-site-logo">
-                    <a href="index.html" class="custom-logo-link" rel="home">
-                        <img width="96" height="97" src="https://static.md/694fcc79f0fc862c52bfc1b135348b2b.png" class="custom-logo" alt="NGKFlip" />
-                    </a>
-                </div>
-                <h1 style="text-transform:uppercase;" class="wp-block-site-title has-medium-font-size">
-                    <a href="index.html" rel="home">NGKFLIP</a>
-                </h1>
+        <div class="wp-block-group is-layout-flex" style="display: flex; align-items: center; gap: 10px;">
+            <div class="is-default-size wp-block-site-logo">
+                <a href="index.html" class="custom-logo-link" rel="home">
+                    <img width="96" height="97" src="logo.png" alt="NGKFlip" class="custom-logo" />
+                </a>
             </div>
-
-            <nav class="is-responsive items-justified-right wp-block-navigation is-layout-flex" aria-label="Header Navigation">
-                <button aria-haspopup="dialog" aria-label="Open menu" class="wp-block-navigation__responsive-container-open">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                        <rect x="4" y="7.5" width="16" height="1.5" />
-                        <rect x="4" y="15" width="16" height="1.5" />
-                    </svg>
-                </button>
-                <div class="wp-block-navigation__responsive-container">
-                    <button aria-label="Close menu" class="wp-block-navigation__responsive-container-close">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                            <path d="M13.06 12l6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06z"></path>
-                        </svg>
-                    </button>
-                    <ul class="wp-block-navigation__container">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html">About</a></li>
-                        <li><a href="deals.html">Deals</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="disclosure.html">Disclosure</a></li>
-                    </ul>
-                </div>
-            </nav>
+            <h1 style="text-transform: uppercase; font-size: 1.8rem; margin: 0;">
+                <a href="index.html" rel="home">NGKFlip</a>
+            </h1>
         </div>
+        
+        <nav class="is-responsive wp-block-navigation" style="display: flex; gap: 15px;">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="deals.html" class="nav-link">Deals</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="disclosure.html" class="nav-link">Disclosure</a>
+        </nav>
     </div>
 </header>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    header {
+        background-color: #1c1c1c;
+        padding: 15px 50px;
+    }
+
+    .custom-logo {
+        height: 50px;
+        width: auto;
+    }
+
+    .nav-link {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 15px;
+        transition: 0.3s;
+    }
+
+    .nav-link:hover {
+        color: #f0b90b;
+    }
+
+    @media (max-width: 768px) {
+        header div {
+            flex-direction: column;
+            text-align: center;
+        }
+        .wp-block-navigation {
+            flex-direction: column;
+        }
+    }
+</style>
