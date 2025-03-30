@@ -24,7 +24,7 @@ header {
 .logo {
     font-size: 28px;
     font-weight: bold;
-    color: #ffcc00; /* Yellow accent */
+    color: #ffffff; /* Yellow accent */
 }
 
 /* Navigation Bar */
@@ -37,7 +37,7 @@ nav {
 }
 
 nav a {
-    color: #ffcc00; /* Yellow highlight */
+    color: #ffffff; /* Yellow highlight */
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
