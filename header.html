@@ -1,72 +1,157 @@
-<header class="wp-block-template-part">
-    <div class="wp-block-group alignfull" style="padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGKFlip - Best Deals Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #ffffff;
+            --accent-color: #f0b90b;
+        }
         
-        <div class="wp-block-group is-layout-flex" style="display: flex; align-items: center; gap: 10px;">
-            <div class="is-default-size wp-block-site-logo">
-                <a href="index.html" class="custom-logo-link" rel="home">
-                    <img width="96" height="97" src="logo.png" alt="NGKFlip" class="custom-logo" />
-                </a>
-            </div>
-            <h1 style="text-transform: uppercase; font-size: 1.8rem; margin: 0; font-family: 'Poppins', sans-serif;">
-                <a href="index.html" rel="home" style="color: #ffffff; text-decoration: none;">NGKFlip</a>
-            </h1>
-        </div>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
         
-        <nav class="is-responsive wp-block-navigation" style="display: flex; gap: 15px;">
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #333;
+        }
+        
+        .site-title {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Navigation Styles */
+        .main-nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        
+        .footer-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .copyright {
+            margin-top: 10px;
+            opacity: 0.7;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 20px;
+            }
+            
+            .main-nav {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-link {
+                font-size: 0.75rem;
+            }
+            
+            .footer-links {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html" class="site-title">NGKFLIP</a>
+        </h1>
+        
+        <nav class="main-nav">
             <a href="index.html" class="nav-link">Home</a>
             <a href="deals.html" class="nav-link">Deals</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="contact.html" class="nav-link">Contact</a>
             <a href="disclosure.html" class="nav-link">Disclosure</a>
         </nav>
-    </div>
-</header>
+    </header>
 
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #121212;
-        color: #ffffff;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
+    <main>
+        <!-- Your main content goes here -->
+    </main>
 
-    header {
-        background-color: #1c1c1c;
-        padding: 15px 50px;
-    }
-
-    .custom-logo {
-        height: 50px;
-        width: auto;
-    }
-
-    .nav-link {
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 10px 15px;
-        transition: 0.3s;
-    }
-
-    .nav-link:hover {
-        color: #f0b90b;
-    }
-
-    /* Text and layout adjustments to match DMFlip style */
-    h1 a {
-        font-size: 2rem; /* Adjust font size */
-        text-align: center; /* Center-align the heading */
-    }
-
-    @media (max-width: 768px) {
-        header div {
-            flex-direction: column;
-            text-align: center;
-        }
-        .wp-block-navigation {
-            flex-direction: column;
-        }
-    }
-</style>
+    <footer>
+        <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="deals.html" class="footer-link">Deals</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+            <a href="disclosure.html" class="footer-link">Disclosure</a>
+        </div>
+        <div class="copyright">
+            &copy; 2023 NGKFlip. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
